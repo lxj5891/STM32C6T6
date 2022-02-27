@@ -1,0 +1,23 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build",
+            "command": "make",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "make"
+        },
+        {
+            "type": "shell",
+            "label": "Build && Flash",
+            "command": "openocd -f /home/antony/code/nuttx/openocd/tcl/interface/jlink.cfg -f /home/antony/code/nuttx/openocd/tcl/target/stm32f1x.cfg -c 'init' -c 'reset halt' -c 'program build/STM32C6T6.elf verify reset exit'",
+            "group": "build",
+            "detail": "flash",
+            "dependsOn": "build"
+        }
+    ],
+    "version": "2.0.0"
+}

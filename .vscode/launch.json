@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/STM32C6T6.elf",
+            "name": "Debug Microcontroller",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [
+                "/home/antony/code/nuttx/openocd/tcl/interface/jlink.cfg",
+                "/home/antony/code/nuttx/openocd/tcl/target/stm32f1x.cfg"
+            ],
+            "showDevDebugOutput": "both"
+        }
+    ]
+}
